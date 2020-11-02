@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="chat" th:id="${chatId}">
+    <div class="text" >Обычный текст</div>
+    <img th:src="@{/images/heavy.jpg}" alt="Мой логотип">
+    <div class="inlineKeyboard" style="display: flex; flex-direction: column; justify-content: center">
+        <div>
+            <button id="00">Кнопка00</button>
+            <button id="01">Кнопка01</button>
+        </div>
+        <div>
+            <button id="10">Кнопка10</button>
+        </div>
+    </div>
+    <form action="mainmenu.html" method="post">
+        <label>
+            <input type="radio" name="color" value="green" id="radioGreen">
+            Отлично
+        </label> <br/>
+        <label>
+            <input type="radio" name="color" value="red" id="radioRed">
+            Средне
+        </label> <br/>
+        <label>
+            <input type="radio" name="color" value="blue" id="radioBlue">
+            Плохо
+        </label> <br/>
+        <input type="submit" value="Отправить данные">
+    </form>
+</div>
+</body>
+<footer>
+    <div class="userInput"></div>
+</footer>
+</html>
