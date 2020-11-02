@@ -40,7 +40,7 @@ public class MainMenu {
             Context context = new Context();
             context.setVariable("chatId", chatId);
             String result = templateEngine.process("mainmenu",context);
-            browser.setPage("mainmenu");
+            browser.setPage(result);
 
             return "mainmenu";
         } catch (IOException e) {
